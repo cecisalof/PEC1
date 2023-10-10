@@ -42,7 +42,15 @@ const checkRequired = (inputArr) => {
 
 // Check input lenght
 const checkLength = (input, min, max) => {
-    if (input.value.length < min) {
+    const redExCutom = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/
+
+    if (input.id === 'password' || input.id === 'password2') {
+        if (redExCutom.test(input.value.trim())) {
+            showSuccess(input)
+        } else {
+            showError(input, 'Password is not valid')
+        }
+    } else if (input.value.length < min) {
         showError(
             input,
             `${getFieldName(input)} must be at least ${min} characters`
