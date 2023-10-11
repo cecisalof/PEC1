@@ -23,7 +23,6 @@ function calculate() {
         })
         // return a new promise
         .then(data => {
-            console.log(data);
             // dynamic variable as index && avoid rate negative values
             const rate = data.rates[currency_two] < 0 ? 0 : data.rates[currency_two];
 
