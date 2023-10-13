@@ -18,10 +18,11 @@ function calculate() {
         .then(res => {
             if (res.ok || res.status === 200) {
                 return res.json();
+            } else {
+                throw new Error('Something went wrong! Please try again.');
             }
-            throw new Error('Something went wrong');
         })
-        // return a new promise
+        .catch((error) => alert(`Network error: ${error.message}`))
         .then(data => {
             // dynamic variable as index && avoid rate negative values
             const rate = data.rates[currency_two] < 0 ? 0 : data.rates[currency_two];
@@ -30,8 +31,8 @@ function calculate() {
 
             amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
         })
-        // if, by any chance, API request failed 
-        .catch(error => alert(`An error has occurred: ${error}`))
+        // if, by any chance, fetch request failed 
+        .catch(error => alert(`An error has occurred: ${error.message}`))
 }
 
 // Event listeners
