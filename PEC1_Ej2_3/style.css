@@ -18,11 +18,11 @@ body {
   margin: 0;
 }
 
-.movie-container {
+.movie-container, .currency {
   margin: 20px 0;
 }
 
-.movie-container select {
+.movie-container select, .currency select {
   background-color: #fff;
   border: 0;
   border-radius: 5px;
@@ -123,3 +123,7 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+/* 
+.currency{
+
+} */
