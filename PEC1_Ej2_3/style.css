@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #242333;
+  background-color:#14213D;
   color: #fff;
   /* center all items horizontally and vertically */
   display: flex;
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   /* height is needed to center all item in the middle of the screen */
   height: 100vh;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
 }
 
@@ -23,10 +23,10 @@ body {
 }
 
 .movie-container select, .currency select {
-  background-color: #fff;
+  background-color: #E5E5E5;
   border: 0;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 10px;
   padding: 5px 15px;
   /* to actually show padding: */
@@ -51,7 +51,7 @@ body {
 }
 
 .seat.selected {
-  background-color: #6feaf6;
+  background-color: #FCA311;
 }
 
 .seat.occupied {
@@ -118,12 +118,10 @@ body {
 
 p.text {
   margin: 5px 0;
+  font-size: 18px;
 }
 
 p.text span {
-  color: #6feaf6;
+  color: #FCA311;
+  font-size: 20px;
 }
-/* 
-.currency{
-
-} */
