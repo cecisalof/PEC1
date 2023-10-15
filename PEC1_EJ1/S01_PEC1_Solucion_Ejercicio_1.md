@@ -1,16 +1,15 @@
 
 ## Parte Teorica:
 
-1. La aparición de HTML5/CSS3/JS ha supuesto el nacimiento del desarrollo front-end moderno. (0.75 puntos)
+### La aparición de HTML5/CSS3/JS ha supuesto el nacimiento del desarrollo front-end moderno. (0.75 puntos)
 
-• ¿Cuál es la ventaja del uso de etiquetas semánticas? Nombra y explica al
-menos 3 de estas ventajas.
+• ¿Cuál es la ventaja del uso de etiquetas semánticas? Nombra y explica al menos 3 de estas ventajas.
 
 El uso de etiquetas semánticas en HTML proporciona varias ventajas cruciales para el desarrollo web moderno. Estas etiquetas están diseñadas específicamente para dar significado y estructura semántica al contenido de una página web, lo que mejora la accesibilidad, la optimización para motores de búsqueda y la mantenibilidad del código. Tres de las ventajas más importantes son:
 
-1.- Mejora la accesibilidad: Las etiquetas semánticas en HTML, como <header>, <nav>, <main>, <article>, <section>, <footer>, entre otras, ayudan a los navegadores y dispositivos de asistencia (lectores de pantalla, por ejemplo) a comprender la estructura y jerarquía del contenido de una página web. Esto beneficia a las personas con discapacidades visuales o cognitivas, ya que pueden navegar y comprender el contenido de manera más efectiva. Además, una estructura semántica clara facilita la navegación y la experiencia de usuario para todos.
+1.- Mejora la accesibilidad: Las etiquetas semánticas en HTML, como `<header>, <nav>, <main>, <article>, <section>, <footer>`, entre otras, ayudan a los navegadores y dispositivos de asistencia (lectores de pantalla, por ejemplo) a comprender la estructura y jerarquía del contenido de una página web. Esto beneficia a las personas con discapacidades visuales o cognitivas, ya que pueden navegar y comprender el contenido de manera más efectiva. Además, una estructura semántica clara facilita la navegación y la experiencia de usuario para todos.
 
-2.- Optimización para motores de búsqueda (SEO): Los motores de búsqueda, como Google, utilizan etiquetas semánticas para comprender mejor el contenido de una página web y asignar relevancia a diferentes secciones. Utilizar etiquetas semánticas adecuadamente mejora la visibilidad de tu sitio web en los resultados de búsqueda. Por ejemplo, los motores de búsqueda pueden dar prioridad a contenido dentro de un <article> como contenido principal, lo que aumenta la posibilidad de que se muestre en los resultados de búsqueda relevantes.
+2.- Optimización para motores de búsqueda (SEO): Los motores de búsqueda, como Google, utilizan etiquetas semánticas para comprender mejor el contenido de una página web y asignar relevancia a diferentes secciones. Utilizar etiquetas semánticas adecuadamente mejora la visibilidad de tu sitio web en los resultados de búsqueda. Por ejemplo, los motores de búsqueda pueden dar prioridad a contenido dentro de un `<article>` como contenido principal, lo que aumenta la posibilidad de que se muestre en los resultados de búsqueda relevantes.
 
 3.- Facilita el mantenimiento y desarrollo colaborativo: Las etiquetas semánticas hacen que el código HTML sea más legible y comprensible para los desarrolladores, lo que facilita el mantenimiento y la colaboración en proyectos web. Al seguir una estructura semántica clara y significativa, los desarrolladores pueden entender rápidamente cómo está organizado el contenido y realizar cambios o actualizaciones de manera más eficiente. Esto es especialmente importante en proyectos web grandes y complejos.
 
@@ -67,7 +66,8 @@ TypeScript es un lenguaje de programación que se considera un "superset" de Jav
 
 Estas son solo algunas de las características principales de TypeScript. En general, TypeScript se utiliza ampliamente en el desarrollo web y de aplicaciones para mejorar la calidad y la mantenibilidad del código JavaScript, especialmente en proyectos grandes y complejos.
 
-2. El lenguaje CSS es muy rígido, poco práctico y ordenado a la hora de programar. Para evitar este problema se han creado los preprocesadores CSS, que ofrecen evidentes ventajas (0.5 puntos)
+
+### El lenguaje CSS es muy rígido, poco práctico y ordenado a la hora de programar. Para evitar este problema se han creado los preprocesadores CSS, que ofrecen evidentes ventajas (0.5 puntos)
 
 • Cita al menos 2 de estos preprocesadores.
 
@@ -113,7 +113,8 @@ Un ejemplo común de transpilación es el proceso de convertir código fuente es
 
 En resumen, un transpilador es una herramienta que traduce código fuente de un lenguaje de programación a otro lenguaje de programación de nivel similar, lo que permite la compatibilidad entre diferentes versiones o entornos de un lenguaje o la adopción de características modernas en un lenguaje en versiones anteriores.
 
-3. El flujo de trabajo profesional en front-end hace indispensable el uso de herramientas como controles de versiones y herramientas de gestión de módulos (0.75 puntos).
+
+### El flujo de trabajo profesional en front-end hace indispensable el uso de herramientas como controles de versiones y herramientas de gestión de módulos (0.75 puntos).
 
 • Cita al menos dos sistemas de control de versiones y dos herramientas de
 gestión de módulos.
