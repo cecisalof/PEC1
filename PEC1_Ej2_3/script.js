@@ -4,6 +4,7 @@ const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 const currencyEl_one = document.getElementById('currency-one');
+// const currency = currencyEl_one.value;
 // const movieOptions = document.querySelectorAll('.movie-container select#movie .ticket-price');
 
 // const amountEl_one = document.getElementById('amount-one');
@@ -13,8 +14,8 @@ const currencyEl_one = document.getElementById('currency-one');
 // const rateEl = document.getElementById('rate');
 let rate;
 
+// keep user selection when page reloads
 populateUI();
-calculate();
 
 // Initial selected price (+ sign make value a number)
 let ticketPrice = +movieSelect.value;
@@ -32,21 +33,24 @@ const updateSelectedCount = () => {
   // Create an array of selected seats index to save it in localStorage
   const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
 
-  // keep user selected info even browser reload
+  // keep user selected seats even if browser reloads
   localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
 
   const selectedSeatsCount = selectedSeats.length;
-  
+
+  // get currency & rate info from localStorage to print it in UI
   const ticketRate = JSON.parse(localStorage.getItem('rate'));
   const currency = localStorage.getItem('currency');
 
   count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * (ticketPrice * ticketRate).toFixed(2) + ' ' + currency;
+  total.innerText = (selectedSeatsCount * (ticketPrice * ticketRate)).toFixed(2) + ' ' + currency;
+  
 }
 
 // Get data from localstorage and populate UI
 function populateUI() {
   const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+  const currency = localStorage.getItem('currency');
 
   if (selectedSeats !== null && selectedSeats.length > 0) {
     seats.forEach((seat, index) => {
@@ -54,8 +58,12 @@ function populateUI() {
         seat.classList.add('selected');
       }
     });
+
+    // keep currency value even if browser reloads
+    currencyEl_one.value = currency;
   }
 
+  // selected movie index
   const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
 
   if (selectedMovieIndex !== null) {
@@ -65,7 +73,6 @@ function populateUI() {
 
 // Fetch exchange rates and update the DOM
 function calculate() {
-
   const currency = currencyEl_one.value;
   localStorage.setItem('currency', currency);
 
@@ -85,6 +92,8 @@ function calculate() {
       rate = data.rates[currency];
       // saving rate in localStorage
       localStorage.setItem('rate', rate);
+      // check function position!
+      updateSelectedCount();
     })
 }
 
