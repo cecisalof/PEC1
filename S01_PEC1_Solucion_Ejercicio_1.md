@@ -1,3 +1,6 @@
+
+## Parte Teorica:
+
 1. La aparición de HTML5/CSS3/JS ha supuesto el nacimiento del desarrollo front-end moderno. (0.75 puntos)
 
 • ¿Cuál es la ventaja del uso de etiquetas semánticas? Nombra y explica al
@@ -133,4 +136,32 @@ Estas herramientas de gestión de módulos son fundamentales en el desarrollo de
 
 
 • Cita y explica al menos 3 comandos de Git.
+
+1. git clone <repositorio_remoto>.
+Este comando se utiliza para crear una copia local de un repositorio remoto en tu máquina. El <repositorio_remoto> es la URL del repositorio que deseas clonar. Después de ejecutar este comando, tendrás una copia completa del historial de cambios y los archivos del repositorio en tu sistema local. Es el primer paso para colaborar en un proyecto o comenzar a trabajar en un repositorio existente.
+
+
+2. git add <archivo(s)>.
+El comando git add se usa para agregar cambios en archivos específicos al área de preparación (staging area) antes de confirmarlos (commit). Puedes especificar archivos individuales o patrones (como . para agregar todos los archivos). Este comando prepara los cambios para que se incluyan en el próximo commit. Por ejemplo, git add archivo.txt agregará archivo.txt al área de preparación.
+
+
+3. git commit -m "Mensaje de confirmación".
+El comando git commit toma los cambios que has agregado previamente al área de preparación (staging area) con git add y crea un nuevo commit en la historia del repositorio. El mensaje de confirmación ("Mensaje de confirmación") es una descripción corta y significativa de los cambios que realizaste en este commit. Los commits son puntos de control en la historia del proyecto que facilitan el seguimiento de los cambios y la colaboración con otros miembros del equipo.
+
+Estos son solo algunos de los comandos básicos de Git. Git es una herramienta muy versátil con muchos otros comandos y opciones que te permiten administrar y colaborar en proyectos de desarrollo de software de manera efectiva.
+
 • Cita y explica brevemente las características más definitorias de WebPack.
+
+Webpack es una herramienta utilizada para la administración de activos y la construcción de proyectos web. Sus características más definitorias son las siguientes:
+
+- Empaquetamiento de Módulos: Webpack es conocido por su capacidad para empaquetar módulos de JavaScript y otros tipos de archivos, lo que facilita la organización y la carga eficiente de dependencias en aplicaciones web. Puede manejar tanto módulos comunes de Node.js como módulos de ECMAScript (ES6) a través de su sistema de "import" y "export".
+
+- Administración de Activos: Webpack permite gestionar y optimizar una variedad de activos, como imágenes, estilos CSS, fuentes y más. Puede transformar y cargar automáticamente estos activos, lo que mejora el rendimiento de una aplicación al reducir las solicitudes de red y al cargar solo lo necesario.
+
+- Cargadores (Loaders): Webpack utiliza cargadores para transformar diferentes tipos de archivos en módulos que pueden ser incluidos en el paquete final. Esto permite la integración de tecnologías como Babel (para transpilación de JavaScript) o Sass (para estilos CSS), entre otros.
+
+- Plugins: Los plugins en Webpack permiten realizar tareas más avanzadas, como la optimización de código, la generación de archivos HTML, la administración de variables de entorno y la eliminación de código no utilizado.
+
+- Amplia Comunidad y Ecosistema de Plugins: Webpack tiene una comunidad activa y un amplio ecosistema de plugins y extensiones, lo que facilita la integración con otras herramientas y marcos de trabajo.
+
+En resumen, Webpack es una herramienta esencial para desarrolladores web que desean organizar, optimizar y empacar activos y código de manera eficiente, lo que contribuye al rendimiento y a una mejor gestión de proyectos web complejos.
