@@ -88,7 +88,7 @@ const getFieldName = (input) => {
 }
 
 form.addEventListener('submit', function (e) {
-    // intercept t he submit action to perform tasks before the form is submitted.
+    // intercept the submit action to perform tasks before the form is submitted.
     e.preventDefault();
     checkRequired([username, email, password, password2])
     checkLength(username, 3, 15)
