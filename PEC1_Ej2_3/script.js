@@ -71,7 +71,7 @@ function calculate() {
   localStorage.setItem('currency', currency);
 
   // fetching resources asynchronously across the network
-  fetch(`https://api.exchangerate-api.com/v4/latest/EUR`)
+  fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
     // return a promise, we catch it with "then"
     .then(res => {
       if (res.ok || res.status === 200) {
