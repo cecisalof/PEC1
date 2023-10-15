@@ -35,12 +35,14 @@ CSS3 ofrece varias opciones para aplicar estilos CSS a un elemento en función d
 
 Puedes utilizar las Media Queries para especificar reglas CSS que se aplicarán solo cuando se cumplan ciertas condiciones relacionadas con el dispositivo, como el ancho de la pantalla. Un ejemplo podría ser:
 
+```
 @media (max-width: 768px) {
   /* Color de fondo para pantallas con un ancho máximo de 768px */
   body {
     background-color: lightblue;
   }
 }
+```
 
 Las Media Queries permiten definir reglas de estilo que se aplicarán solo cuando se cumplan ciertas condiciones específicas, como el ancho de la pantalla del dispositivo. Esto permite crear diseños responsivos y adaptar la apariencia de tu sitio web a diferentes dispositivos y tamaños de pantalla.
 
@@ -116,8 +118,7 @@ En resumen, un transpilador es una herramienta que traduce código fuente de un 
 
 ### El flujo de trabajo profesional en front-end hace indispensable el uso de herramientas como controles de versiones y herramientas de gestión de módulos (0.75 puntos).
 
-• Cita al menos dos sistemas de control de versiones y dos herramientas de
-gestión de módulos.
+• Cita al menos dos sistemas de control de versiones y dos herramientas de gestión de módulos.
 
 Git: Git es uno de los sistemas de control de versiones más populares y ampliamente utilizados. Fue desarrollado por Linus Torvalds y es conocido por su velocidad, eficiencia y capacidad de trabajo en entornos distribuidos. Git es especialmente popular en el desarrollo de software y se utiliza para rastrear cambios en el código fuente, colaborar en proyectos y mantener un historial completo de revisiones.
 
@@ -127,26 +128,26 @@ Subversion (SVN): Subversion, también conocido como SVN, es otro sistema de con
 
 La elección entre Git y SVN depende en gran medida de las necesidades específicas del proyecto y las preferencias del equipo de desarrollo. Git es especialmente adecuado para proyectos distribuidos y para aquellos que requieren una mayor flexibilidad en el flujo de trabajo de desarrollo, mientras que SVN es más adecuado para proyectos centralizados y estructuras de desarrollo más tradicionales.
 
-En cuanto a las herramientas de gestión de módulos  podría citas: 
+En cuanto a las herramientas de gestión de módulos podría citar: 
 
-npm (Node Package Manager): npm es la herramienta de gestión de paquetes predeterminada para JavaScript y Node.js. Se utiliza para instalar, administrar y actualizar paquetes de código (módulos) que se utilizan en proyectos de desarrollo de JavaScript. npm se integra estrechamente con el ecosistema de Node.js y es ampliamente utilizado para administrar dependencias en proyectos web y de aplicaciones.
+* npm (Node Package Manager): npm es la herramienta de gestión de paquetes predeterminada para JavaScript y Node.js. Se utiliza para instalar, administrar y actualizar paquetes de código (módulos) que se utilizan en proyectos de desarrollo de JavaScript. npm se integra estrechamente con el ecosistema de Node.js y es ampliamente utilizado para administrar dependencias en proyectos web y de aplicaciones.
 
-Yarn: Yarn es otra herramienta de gestión de paquetes para JavaScript que se creó para abordar algunos problemas de rendimiento y seguridad que se experimentaron con npm en el pasado. Ofrece una gestión de dependencias más rápida y eficiente, así como una mayor seguridad. Yarn es compatible con los paquetes de npm y se utiliza para instalar y gestionar dependencias de proyectos de JavaScript y Node.js. Además de resolver problemas de rendimiento, Yarn ofrece otras características, como la instalación en paralelo y un archivo "yarn.lock" para garantizar la reproducibilidad de las dependencias.
+* Yarn: Yarn es otra herramienta de gestión de paquetes para JavaScript que se creó para abordar algunos problemas de rendimiento y seguridad que se experimentaron con npm en el pasado. Ofrece una gestión de dependencias más rápida y eficiente, así como una mayor seguridad. Yarn es compatible con los paquetes de npm y se utiliza para instalar y gestionar dependencias de proyectos de JavaScript y Node.js. Además de resolver problemas de rendimiento, Yarn ofrece otras características, como la instalación en paralelo y un archivo "yarn.lock" para garantizar la reproducibilidad de las dependencias.
 
 Estas herramientas de gestión de módulos son fundamentales en el desarrollo de aplicaciones y sitios web modernos, ya que simplifican la gestión de dependencias externas y aseguran que las bibliotecas y los módulos utilizados sean consistentes y compatibles entre sí.
 
 
 • Cita y explica al menos 3 comandos de Git.
 
-1. git clone <repositorio_remoto>.
+1. `git clone <repositorio_remoto>`.
 Este comando se utiliza para crear una copia local de un repositorio remoto en tu máquina. El <repositorio_remoto> es la URL del repositorio que deseas clonar. Después de ejecutar este comando, tendrás una copia completa del historial de cambios y los archivos del repositorio en tu sistema local. Es el primer paso para colaborar en un proyecto o comenzar a trabajar en un repositorio existente.
 
 
-2. git add <archivo(s)>.
+2. `git add <archivo(s)>`.
 El comando git add se usa para agregar cambios en archivos específicos al área de preparación (staging area) antes de confirmarlos (commit). Puedes especificar archivos individuales o patrones (como . para agregar todos los archivos). Este comando prepara los cambios para que se incluyan en el próximo commit. Por ejemplo, git add archivo.txt agregará archivo.txt al área de preparación.
 
 
-3. git commit -m "Mensaje de confirmación".
+3. `git commit -m "Mensaje de confirmación"`.
 El comando git commit toma los cambios que has agregado previamente al área de preparación (staging area) con git add y crea un nuevo commit en la historia del repositorio. El mensaje de confirmación ("Mensaje de confirmación") es una descripción corta y significativa de los cambios que realizaste en este commit. Los commits son puntos de control en la historia del proyecto que facilitan el seguimiento de los cambios y la colaboración con otros miembros del equipo.
 
 Estos son solo algunos de los comandos básicos de Git. Git es una herramienta muy versátil con muchos otros comandos y opciones que te permiten administrar y colaborar en proyectos de desarrollo de software de manera efectiva.
