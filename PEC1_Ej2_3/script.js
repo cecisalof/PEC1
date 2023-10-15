@@ -10,6 +10,8 @@ let rate;
 populateUI();
 // print tricket unit price based on currency when page loads
 appendCurrencyExchange();
+// get initial currency & set rate value
+calculate();
 
 // Initial selected price (+ sign make value a number)
 let ticketPrice = +movieSelect.value;
