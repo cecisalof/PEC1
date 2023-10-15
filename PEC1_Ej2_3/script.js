@@ -4,18 +4,12 @@ const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 const currencyEl_one = document.getElementById('currency-one');
-// const currency = currencyEl_one.value;
-// const movieOptions = document.querySelectorAll('.movie-container select#movie .ticket-price');
-
-// const amountEl_one = document.getElementById('amount-one');
-// const currencyEl_two = document.getElementById('currency-two');
-// const amountEl_two = document.getElementById('amount-two');
-
-// const rateEl = document.getElementById('rate');
 let rate;
 
 // keep user selection when page reloads
 populateUI();
+// print tricket unit price based on currency when page loads
+appendCurrencyExchange();
 
 // Initial selected price (+ sign make value a number)
 let ticketPrice = +movieSelect.value;
@@ -44,7 +38,7 @@ const updateSelectedCount = () => {
 
   count.innerText = selectedSeatsCount;
   total.innerText = (selectedSeatsCount * (ticketPrice * ticketRate)).toFixed(2) + ' ' + currency;
-  
+
 }
 
 // Get data from localstorage and populate UI
@@ -92,16 +86,32 @@ function calculate() {
       rate = data.rates[currency];
       // saving rate in localStorage
       localStorage.setItem('rate', rate);
-      // check function position!
+
+      // update ticket price, currency in the UI
       updateSelectedCount();
+
+
+      // update ticket unit price in movie select when currency changed
+      appendCurrencyExchange();
     })
 }
 
-const appendCurrencyExchange = () => {
+function appendCurrencyExchange() {
+  const currency = localStorage.getItem('currency');
+  const rate = localStorage.getItem('rate');
 
   for (const child of movieSelect.children) {
+
     let content = document.createTextNode(` (${(child.value * rate).toFixed(2)} ${currency})`);
-    child.appendChild(content);
+    
+    if (child.childNodes.length === 1) {
+      child.appendChild(content);
+    } else {
+      // remove previous unit price in DOM
+      child.removeChild(child.lastChild);
+      // append new child with updated unit price based on currency selection
+      child.appendChild(content);
+    }
   }
 }
 
@@ -127,5 +137,6 @@ container.addEventListener('click', e => {
 
 // Event listeners
 currencyEl_one.addEventListener('change', calculate);
+
 // Initial count and total set
 updateSelectedCount();
